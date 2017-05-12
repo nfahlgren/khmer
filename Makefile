@@ -123,6 +123,7 @@ dist/khmer-$(VERSION).tar.gz: $(SOURCES)
 clean: FORCE
 	cd lib && $(MAKE) clean || true
 	cd tests && rm -rf khmertest_* || true
+	cd third-party/cqf && make clean || true
 	rm -f pytest_runner-*.egg pytests.xml
 	rm -f $(EXTENSION_MODULE)
 	rm -f khmer/*.pyc lib/*.pyc scripts/*.pyc tests/*.pyc oxli/*.pyc \
